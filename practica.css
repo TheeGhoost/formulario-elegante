@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* h1 {
+  margin: 20px;
+  font-size: 40px;
+  text-align: center;
+}
+
+h2 {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid rgb(56, 240, 224);
+} */
+
+.box-transition {
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  background: #401e8f;
+  padding: 10px;
+  color: #fff;
+}
+
+/* img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #000;
+  margin: 10px;
+  transition: transform 1s ease, filter 1s ease;
+} */
+
+.box {
+  width: 200px;
+  height: 160px;
+  border: 2px solid #000;
+  margin: 0px auto;
+  background: magenta;
+  transition-property: background;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+
+.box:hover {
+  background: cyan;
+}
+
+.box-transition img:hover {
+  filter: contrast(140%);
+  transform: scale(1.1);
+}
+
+.section-2 {
+  background: #238fd6;
+}
+
+.section-2 .contenedor-transformacion {
+  transition: transform 1s ease;
+  border: 2px solid rgb(119, 0, 255);
+  box-sizing: content-box;
+  background: linear-gradient(to right, #7414f3, rgb(236, 16, 225));
+  height: 168.76px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.section-2 img {
+  margin: 0px;
+}
+.section-2 img:hover {
+  transform: translate(-20px, 20px);
+}
+
+.fondo-amigable {
+  /*Efecto fondo de 2 colores amigable*/
+  width: 300px;
+  height: 300px;
+  /*border-radius: 50%;*/
+  border: 5px solid #000;
+  background-image: radial-gradient(#fff 65%, #000 65% 67%, #0000 67%),
+    repeating-conic-gradient(#09f 0% 8%, #0bf 8% 16%);
+  /* De 8% a 8% 16%
+	  #800, #b00
+	  #080, #0b0
+	  #008, #00b
+	  #09F, #0bf*/
+}
+
+body {
+  background: #4908b1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 4px;
+  transform: rotate(20deg) skew(-10deg, -5deg);
+  transition: box-shadow 0.25s ease-in;
+}
+
+.card:hover {
+  box-shadow: rgba(255, 255, 255, 0.5) 5px 3px,
+    rgba(255, 255, 255, 0.4) 10px 6px, rgba(255, 255, 255, 0.3) 15px 9px;
+}
+
+/* =============================================== */
+
+.formulario-contacto {
+  background: rgb(255, 255, 255, 0.1);
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  border-right: 1px solid rgb(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+  margin: 15px;
+  min-width: 400px;
+  max-width: 800px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+  z-index: 1000;
+}
+
+.formulario-contacto::after {
+  content: "";
+  position: absolute;
+  margin: 5px;
+  border-radius: 10px 0 0 10px;
+  width: calc(50% - 5px);
+  top: 0;
+  left: 0;
+  height: calc(100% - 10px);
+  background: rgb(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+.formulario-contacto::before {
+  content: "";
+  position: absolute;
+  margin: 5px;
+  border-radius: 0 10px 10px 0;
+  width: calc(50% - 5px);
+  top: 0;
+  right: 0;
+  height: calc(100% - 10px);
+  background: rgb(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2 {
+  font-family: "Oswald", sans-serif;
+  user-select: none;
+  font-size: 2em;
+  display: block;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+section {
+  position: relative;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #1131e4, #2b79f5);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  transform: translate(-40%, -40%);
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e00f0f, #eca60d);
+  transform: translate(40%, 40%);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+}
+
+.caja-padre-contacto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.caja-padre-contacto .padre-casilla {
+  width: 35%;
+  margin: 20px 40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.caja-padre-contacto .padre-casilla input {
+  user-select: none;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  outline: none;
+}
+
+.padre-casilla .contacto-textos {
+  color: #fff;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.caja-padre-contacto .padre-casilla input:focus ~ .contacto-textos,
+.caja-padre-contacto .padre-casilla input:valid ~ .contacto-textos {
+  top: -20px;
+  left: -5px;
+}
+
+.caja-padre-contacto .mensaje {
+  width: 85%;
+  margin-top: 25px;
+}
+
+.caja-padre-contacto .mensaje .texto-textarea {
+  left: 5px;
+  top: 0;
+  position: absolute;
+  color: #fff;
+  display: block;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.caja-padre-contacto .mensaje textarea:focus ~ .texto-textarea {
+  top: -20px;
+  left: -5px;
+}
+
+textarea {
+  resize: none;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  border-right: 1px solid rgb(255, 255, 255, 0.1);
+  border-bottom: 2px solid #fff;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+.enviar-contacto {
+  width: 85%;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 5%;
+}
+
+button {
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  border-right: 1px solid rgb(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+  border-radius: 2px;
+  color: #fff;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  letter-spacing: 1px;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -5%;
+  width: 15px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.enviar-contacto button:hover::after {
+  left: 108%;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -5%;
+  width: 15px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.enviar-contacto button:hover::before {
+  right: 103%;
+}
+
+@media only screen and (max-width: 900px) {
+  .caja-padre-contacto .padre-casilla {
+    width: 85%;
+  }
+}
